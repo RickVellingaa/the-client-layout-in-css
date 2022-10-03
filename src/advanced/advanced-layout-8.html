@@ -1,18 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced Layout 8</title>
-    <link rel="stylesheet" href="../style.css" />
-    <style>
-      /* Doe hier jouw ding! */
-    </style>
-  </head>
-  <body id="advanced-layout-8">
-    <header><h1>Advanced Layout 8</h1></header>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Layout 8</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Doe hier jouw ding! */
+    body {
+      display: grid;
+      place-content: center;
+      height: 100vh;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+      height: 5em;
+      /* margin: 0px 0px 10px 0px; */
+      width: 100%;
+    }
+
+    h1{
+      font-size: 1em;
+    }
+
+    header{
+      position: absolute;
+      top: -70px;
+      left: -70px;
+      transform: rotate(15deg);
+      z-index: 10;
+      width: 7em;
+      height: 7em;
+    }
+
+    nav{
+      position: absolute;
+      bottom: 15px;
+      left: 50px;
+      z-index: 10;
+      width: 4em;
+      height: 4em;
+    }
+
+    main {
+      width: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 90%;
+    }
+
+    footer {
+      position: absolute;
+      right: -120px;
+      bottom: -120px;
+      transform: rotate(45deg);
+      width: 7em;
+      height: 7em;
+    }
+
+    div {
+      width: 25vw;
+      height: 70vh;
+      border: 1px solid black;
+      overflow: hidden;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body id="advanced-layout-8">
+  <div>
+    <header>
+      <h1>Advanced Layout 8</h1>
+    </header>
     <nav><a href="../index.html">Terug naar het overzicht</a></nav>
     <main></main>
     <footer></footer>
-  </body>
+  </div>
+</body>
+
 </html>

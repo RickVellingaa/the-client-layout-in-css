@@ -1,18 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced Layout 3</title>
-    <link rel="stylesheet" href="../style.css" />
-    <style>
-      /* Doe hier jouw ding! */
-    </style>
-  </head>
-  <body id="advanced-layout-3">
-    <header><h1>Advanced Layout 3</h1></header>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Layout 3</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Doe hier jouw ding! */
+    
+    body {
+      display: grid;
+      height: 100vh;
+      place-content: center;
+    }
+    
+    div {
+      width: 35vw;
+      height: 80vh;
+      /* background-color: red; */
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+      height: 5em;
+      margin: 0px 0px 10px 0px;
+      width: 6em;
+    }
+
+    header,
+    nav,
+    footer{
+      z-index: 10 !important;
+    }
+
+    main{
+      width: 85%;
+      height: 95%;
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      margin: 0 !important;
+      left: 10%;
+      transform: translateY(-50%);
+    }
+
+    h1, a{
+      font-size: 1em;
+    }
+
+  </style>
+</head>
+
+<body id="advanced-layout-3">
+  <div>
+    <header>
+      <h1>Advanced Layout 3</h1>
+    </header>
     <nav><a href="../index.html">Terug naar het overzicht</a></nav>
     <main></main>
     <footer></footer>
-  </body>
+  </div>
+</body>
+
 </html>
