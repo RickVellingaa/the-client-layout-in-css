@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced Layout 1</title>
-    <link rel="stylesheet" href="../style.css" />
-    <style>
-      /* Doe hier jouw ding! */
-    </style>
-  </head>
-  <body id="advanced-layout-1">
-    <header><h1>Advanced Layout 1</h1></header>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Layout 1</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Doe hier jouw ding! */
+
+    body {
+      display: grid;
+      place-content: center;
+      height: 100vh;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+      height: 5em;
+      margin: 0px 0px 10px 0px;
+      width: 15em;
+    }
+
+    nav {
+      align-self: flex-start;
+    }
+
+    div {
+      width: 45vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+  </style>
+</head>
+
+<body id="advanced-layout-1">
+  <div>
+    <header>
+      <h1>Advanced Layout 1</h1>
+    </header>
     <nav><a href="../index.html">Terug naar het overzicht</a></nav>
     <main></main>
     <footer></footer>
-  </body>
+  </div>
+</body>
+
 </html>
