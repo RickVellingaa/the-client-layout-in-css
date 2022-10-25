@@ -7,6 +7,42 @@
     <link rel="stylesheet" href="../style.css" />
     <style>
       /* Doe hier jouw ding! */
+      body {
+        display: grid;
+        max-width: 40vw;
+        grid-gap: 10px;
+        margin: auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+          "nav header"
+          "main footer";
+      }
+
+      header {
+        grid-area: header;
+        transform-origin: left;
+        transform: skewy(-10deg);
+      }
+
+      nav {
+        grid-area: nav;
+        transform: skewy(-10deg);
+        transform-origin: 100%;
+      }
+
+      main {
+        grid-area: main;
+        transform: skewy(-10deg);
+        transform-origin: 100%;
+      }
+
+      footer {
+        grid-area: footer;
+        transform: skewy(-10deg);
+        transform-origin: 0%;
+      }
+      
     </style>
   </head>
   <body id="advanced-layout-4">

@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced Layout 2</title>
-    <link rel="stylesheet" href="../style.css" />
-    <style>
-      /* Doe hier jouw ding! */
-      body{
-        height: 100vh;
-        display: grid;
-        place-content: center;
-      }
 
-    header,
-    nav,
-    main,
-    footer {
-      height: 5em;
-      margin: 0px 0px 10px 0px;
-      width: 15em;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Layout 2</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Doe hier jouw ding! */
+    body {
+      margin: auto;
+      max-width: 45vw;
+      grid-gap: 10px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-areas:
+        "."
+        "header"
+        "nav"
+        "main"
+        "footer";
     }
 
-    
+    header {
+      grid-area: header;
+      transform: rotate(25deg);
+    }
 
-    </style>
-  </head>
-  <body id="advanced-layout-2">
-    <div>
-    <header>
-      <h1>Advanced Layout 2</h1>
-    </header>
-    <nav><a href="../index.html">Terug naar het overzicht</a></nav>
-    <main></main>
-    <footer></footer>
-  </div>
-  </body>
+    nav {
+      grid-area: header;
+      transform: rotate(-25deg);
+    }
+
+    main {
+      grid-area: main;
+    }
+
+    footer {
+      grid-area: footer;
+    }
+  </style>
+</head>
+
+<body id="advanced-layout-2">
+  <header>
+    <h1>Advanced Layout 2</h1>
+  </header>
+  <nav><a href="../index.html">Terug naar het overzicht</a></nav>
+  <main></main>
+  <footer></footer>
+</body>
+
 </html>
